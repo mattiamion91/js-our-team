@@ -74,6 +74,10 @@ const imageField = document.getElementById('image');
 // chiamo funzione per renderizzare la lista mebri
 renderTeam(teamMembers, teamContainer);
 
+// gestione di aggiunta nuovo membro
+formField.addEventListener("submit", addMember);
+
+
 //funzione che fa iul rendering completo delle card dei membri del team
 
 function renderTeam(arrTeam, elementOutput) {
@@ -98,8 +102,8 @@ function createMemberCard(memebrObj) {
                 <img src="${memebrObj.img}" alt="${memebrObj.name}" />
             </div >
         <div class="card-text">
-            <h2>${memebrObj.name}</h2>
-            <h3>${memebrObj.role}</h3>
+            <h3>${memebrObj.name}</h3>
+            <h4>${memebrObj.role}</h4>
             <a href="mailto:${memebrObj.email}">${memebrObj.email}</a>
         </div>
     </div >
@@ -108,4 +112,35 @@ function createMemberCard(memebrObj) {
   return card
 }
 
+// funzione di gestione della creazione nuovo membro (gestione invio form)
+function addMember(event) {
+
+    // preveniamo comportamento di base form
+    event.preventDefault();
+
+    // recupero i valori dei campi
+    const name = nameField.value;
+    const role = roleField.value;
+    const email = emailField.value;
+    const image = imageField.value;
+
+    // creo il nuovo oggetto del membo del team
+    const newMember = {
+        name,
+        role,
+        email,
+        image
+    }
+
+    // aggiorniamo i dati (array di oggetti)
+    teamMembers.push(newMember);
+
+    // reset campi form
+    event.target.reset();
+
+    // aggiorniamo la pagina
+    // chiamo funzione per renderizzare la lista mebri
+    renderTeam(teamMembers, teamContainer);
+
+}
 

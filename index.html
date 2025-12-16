@@ -22,6 +22,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in varius ante. Sed quis luctus eros.
                 Phasellus rutrum laoreet leo in consequat.
             </p>
+
             <div class="team-container">
                 <!-- Qui andranno tutte le card generate via JS -->
                 <!-- <div class="team-card">
@@ -36,10 +37,31 @@
             </div>
         </section>
 
-        <script src="./scripts/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+        <!-- Sezione per il form -->
+        <section class="form-container">
+            <h2>Aggiungi membro</h2>
+            <form id="member-form">
+                <div>
+                    <input type="text" id="name" placeholder="Nome completo" required>
+                </div>
+                <div>
+                    <input type="text" id="role" placeholder="Ruolo" required>
+                </div>
+                <div>
+                    <input type="email" id="email" placeholder="e-mail" required>
+                </div>
+                <div>
+                    <input type="text" id="image" placeholder="Url dell'immagine" required>
+                </div>
+                <button type="submit">Aggiungi membro</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
