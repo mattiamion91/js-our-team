@@ -36,7 +36,7 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
-
+/*
 //setUp
 
 const outputTest = document.getElementById('team-list')
@@ -57,3 +57,55 @@ for (let index = 0; index < teamMembers.length; index++) {
 //stampo la stringa completa in html usando innerhtml
 
 outputTest.innerHTML = outputList
+*/
+
+//seleziono container
+
+const teamContainer = document.querySelector(".team-container");
+
+//seleziono elmenti form
+
+const formField = document.getElementById("member-form");
+const nameField = document.getElementById('name');
+const roleField = document.getElementById('role');
+const emailField = document.getElementById('email')
+const imageField = document.getElementById('image');
+
+// chiamo funzione per renderizzare la lista mebri
+renderTeam(teamMembers, teamContainer);
+
+//funzione che fa iul rendering completo delle card dei membri del team
+
+function renderTeam(arrTeam, elementOutput) {
+  //var che avvumula elementi output
+  let cards = '';
+  //output di prova che cicla arr di obj
+  for (let index = 0; index < arrTeam.length; index++) {
+    const memberTeam = arrTeam[index];
+    //gni giro ad incremento il contenuto output
+    cards += createMemberCard(memberTeam);
+  }
+  // inseriamo la stringa completa che innerHTML trasformerà, nell'elemento di output
+  elementOutput.innerHTML = cards;
+}
+
+// funzione che genera la card ricevendo oggetto dal quale prendere le info
+function createMemberCard(memebrObj) {
+  
+  const card = `
+    <div class="team-card">
+            <div class="card-image">
+                <img src="${memebrObj.img}" alt="${memebrObj.name}" />
+            </div >
+        <div class="card-text">
+            <h2>${memebrObj.name}</h2>
+            <h3>${memebrObj.role}</h3>
+            <a href="mailto:${memebrObj.email}">${memebrObj.email}</a>
+        </div>
+    </div >
+        `;
+
+  return card
+}
+
+
