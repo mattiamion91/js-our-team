@@ -69,7 +69,7 @@ const formField = document.getElementById("member-form");
 const nameField = document.getElementById('name');
 const roleField = document.getElementById('role');
 const emailField = document.getElementById('email')
-const imageField = document.getElementById('image');
+const imgField = document.getElementById('img');
 
 // chiamo funzione per renderizzare la lista mebri
 renderTeam(teamMembers, teamContainer);
@@ -97,13 +97,13 @@ function renderTeam(arrTeam, elementOutput) {
 function createMemberCard(memebrObj) {
   
   const card = `
-    <div class="team-card">
-            <div class="card-image">
-                <img src="${memebrObj.img}" alt="${memebrObj.name}" />
+    <div class="team-card col-sm-12 col-md-6 col-lg-4 p-0 border border-white border-5">
+            <div class="card-image team-img">
+                <img class="img-fluid" src="${memebrObj.img}" alt="${memebrObj.name}" />
             </div >
-        <div class="card-text">
-            <h3>${memebrObj.name}</h3>
-            <h4>${memebrObj.role}</h4>
+        <div class="card-text text-white p-2">
+            <h4><strong>${memebrObj.name}</strong></h4>
+            <h6>${memebrObj.role}</h6>
             <a href="mailto:${memebrObj.email}">${memebrObj.email}</a>
         </div>
     </div >
@@ -122,14 +122,14 @@ function addMember(event) {
     const name = nameField.value;
     const role = roleField.value;
     const email = emailField.value;
-    const image = imageField.value;
+    const img = imgField.value;
 
     // creo il nuovo oggetto del membo del team
     const newMember = {
         name,
         role,
         email,
-        image
+        img
     }
 
     // aggiorniamo i dati (array di oggetti)

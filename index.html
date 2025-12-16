@@ -16,44 +16,36 @@
     </ul> -->
 
     <div class="container">
-        <section id="team">
-            <h2 class="section-title">Meet our Team</h2>
-            <p class="section-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in varius ante. Sed quis luctus eros.
-                Phasellus rutrum laoreet leo in consequat.
-            </p>
+        <div class="row mb-5">
+            <section id="team col-12">
+                <h2 class="section-title display-4 fw-bold team-title text-center">Meet our Team</h2>
+                <p class="section-description  text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in varius ante. Sed quis luctus
+                    eros.
+                    Phasellus rutrum laoreet leo in consequat.
+                </p>
 
-            <div class="team-container">
-                <!-- Qui andranno tutte le card generate via JS -->
-                <!-- <div class="team-card">
-                    <div class="card-image">
-                        <img src="img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett" />
-                    </div>
-                    <div class="card-text">
-                        <h3>Wayne Barnett</h3>
-                        <p>Founder & CEO</p>
-                    </div>
-                </div> -->
-            </div>
-        </section>
+                <div class="team-container row"> </div>
+            </section>
+        </div>
 
         <!-- Sezione per il form -->
         <section class="form-container">
             <h2>Aggiungi membro</h2>
             <form id="member-form">
-                <div>
-                    <input type="text" id="name" placeholder="Nome completo" required>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Nome completo" required>
                 </div>
-                <div>
-                    <input type="text" id="role" placeholder="Ruolo" required>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="role" placeholder="Ruolo" required>
                 </div>
-                <div>
-                    <input type="email" id="email" placeholder="e-mail" required>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="e-mail" required>
                 </div>
-                <div>
-                    <input type="text" id="image" placeholder="Url dell'immagine" required>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="img" placeholder="Url dell'immagine" required>
                 </div>
-                <button type="submit">Aggiungi membro</button>
+                <button type="submit" class="btn btn-primary">Aggiungi membro</button>
             </form>
         </section>
     </div>

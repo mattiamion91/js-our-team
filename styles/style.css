@@ -1,7 +1,25 @@
-/*reset*/
+/* Colore titolo */
+.team-title {
+    color: #ff69b4;
+}
 
-*{
+/* Stile card contenitore */
+.team-card {
+    background-color: #000; 
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+}
+
+/* Stile immagine card */
+.team-img {
+    width: 120px; 
+    height: 120px;
+    object-fit: cover; 
     margin: 0;
-    padding: 0;
-    box-sizing: 0;
+}
+
+/* Stile del blocco informativo (testo) */
+.team-info {
+    flex-grow: 1; /* Permette al blocco testo di occupare lo spazio rimanente */
 }
